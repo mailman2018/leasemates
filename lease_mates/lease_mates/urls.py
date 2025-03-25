@@ -23,6 +23,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('communication.urls')),
     path('main/', include('maintenance.urls')),  # Include maintenance API
+    path('api/properties/', include('properties.urls')),  # Include properties API
     path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),  # Login endpoint
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh')  # Token refresh endpoint
 ]
